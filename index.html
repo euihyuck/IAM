@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인소개사이트</title>
+    <link rel="stylesheet" href="css/style.css">
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="centerbox1200">
+            <nav>
+                <ul class="gnb">
+                    <li class="on"><a href="index.html">제가 yo</a></li>
+                    <li><a href="#">요즘 yo</a></li>
+                    <li><a href="#"><img src="images/logo.png" alt="로고"></a></li>
+                    <li><a href="#">만든건yo</a></li>
+                    <li><a href="#">어떤가yo</a></li>
+                </ul>
+            </nav>
+        </div>
+      
+    </header>
+    <div id="section1">
+        <article>
+            <h2 data-aos="fade-up"  data-aos-delay="300"
+            data-aos-anchor-placement="center-center">나</h2>
+            <div class="hide_box">
+                <p>갈땐 떳떳하게 <br>가고 싶은사람</p>
+                <span>ENFP-A</span>
+                <em>창의적이고 재기발랄한 성격, 넘치는 열정으로 사람들과<br> 즐겁게 잘 어울림</em>               
+            </div>
+        </article>
+    </div>
+    <div id="section2">
+
+        <article>
+            <h2 data-aos="fade-up">남</h2>
+            <div class="hide_box">
+                <p>는 시간에 <br>하는 GAME</p>
+                
+                <em>팟지에 혼자 불타고<br>킬딜금인데도 욕먹는<br>정크렛 유저</em>               
+            </div>
+        </article>
+    </div>
+    <div id="section3">
+        <div class="click">
+           <figure><img src="images/c2.png" alt=""></figure>
+    
+           <ul class="img_box">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>   
+            </ul>
+
+            <div class="close"><img src="images/icon (2).png" alt=""></div>
+       </div>
+       
+    </div>
+    <div id="section4">
+        <h2>Banner</h2>
+        <!-- Swiper -->
+  <div class="swiper mySwiper" data-aos="fade-up">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+    </div>
+    <div id="section5">
+        <div class="text"><a href="#">THANK YOU</a></div>
+    </div>
+    
+
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/action.js"></script>
+     <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
