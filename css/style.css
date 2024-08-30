@@ -6,7 +6,7 @@
 
 .centerbox1200 {width: 1200px;margin: 0 auto;border: 1px solid #000;}
 
-header h1 {position: fixed; z-index: 2; left: 50%; top: 20px; transform: translateX(-50%);z-index: 99;}
+header h1 {position: fixed; z-index: 2; left: 50%; top: 0%; transform: translateX(-50%);z-index: 99;}
 
 
 
@@ -25,7 +25,7 @@ header nav .gnb li a {color: #fff;font-size: 22px;}
 
 #section1 {background: url(../images/bg1.jpg) ;background-size: cover;width: 100%;height: 100vh;position:relative;color: #fff;}
 
-#section2 {background: url(../images/bg2.jpg) ;background-size: cover;width: 100%;height: 100vh;position:relative;color: #fff;}
+#section2 {background: url(../images/bg2png.png) ;background-size: cover;width: 100%;height: 100vh;position:relative;color: #fff;}
 
 #section3 {background: url(../images/12.png) ;background-size: cover;width: 100%;height: 100vh;position:relative;color: #fff;}
 
@@ -36,7 +36,7 @@ header nav .gnb li a {color: #fff;font-size: 22px;}
 
 #section1 article {position: absolute; left: 50%;top:20%;transform: translateX(-50%);display: flex; }
 
-#section1 article h2 {font-size: 400px;margin-bottom: 200px;}
+#section1 article h2 {font-size: 400px;margin-bottom: 200px; font-family: 'goorm-sans-bold';}
 
 #section1 article .hide_box {margin-top:100px;display: flex;flex-direction: column;width: 0;height: 0;overflow: hidden;transition: 1s;/* animation: moVe 2s forwards */;}
 /* @keyframes moVe {
