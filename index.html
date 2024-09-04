@@ -8,6 +8,20 @@
      <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fullpage.min.css">
+  <style>
+    
+  #fp-nav ul li a span {background: #000;}
+  #fp-nav ul li a.active span {background: red;}
+
+  .section.on {animation:sectionAni 1s forwards }
+    @keyframes sectionAni {
+
+      0% {transform: scale(1.5);letter-spacing: 1em;}
+       
+      100% {transform: scale(1);letter-spacing: 0em;}
+    }
+  </style>
     
 
 
@@ -19,19 +33,18 @@
                     
             <nav>
                 <ul class="gnb">
-                    <li class="on"><a href="#">제가 </a></li>
-                    <li><a href="#">요즘 </a></li>
-                    <li><a href="#">만든</a></li>
-                    <li><a href="#">배너</a></li>
-                                        
-                    <li><a href="#">어때요?</a></li>
+                    <li><a href="#j1">제가 </a></li>
+                    <li><a href="#j2">요즘 </a></li>
+                    <li><a href="#j3">만든</a></li>
+                    <li><a href="#j4">배너</a></li>                                        
+                    <li><a href="#j5">어때요?</a></li>
                 </ul>
             </nav>
         </div>
       
     </header>
-    <div id="papa">
-      <div id="section1">
+    <div id="fullpage">
+      <div class="section" id="section1">
           <article>
               <h2>I</h2>
               <div class="hide_box">
@@ -41,10 +54,10 @@
               </div>
           </article>
       </div>
-      <div id="section2">
+      <div class="section" id="section2">
   
           <article>
-              <h2 data-aos="fade-up">남</h2>
+              <h2>남</h2>
               <div class="hide_box">
                   <p>는 시간에 <br>하는 GAME</p>
                   
@@ -52,10 +65,27 @@
               </div>
           </article>
       </div>
-      <div id="section3">
+      <div class="section" id="section3">
           <div>
              <figure class="click"><img src="images/c2.png" alt=""></figure>
-      
+
+             <!-- Swiper -->
+              <!-- 
+              <div class="swiper mySwiper2 img_box">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/i1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="images/i1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="images/i1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="images/i1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="images/i1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="images/i1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="images/i1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="images/i1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="images/i1.png" alt=""></div>
+                </div>
+              </div> -->
+
+       
              <ul class="img_box">
                 <li><img src="images/i1.png" alt=""></li>
                 <li><img src="images/i2.jpg" alt=""></li>
@@ -64,17 +94,22 @@
                 <li><img src="images/i5.png" alt=""></li>
                 <li><img src="images/i6.png" alt=""></li>
                 <li><img src="images/i7.png" alt=""></li>
-                <li>8</li>   
+                <li><img src="images/i8.png" alt=""></li>   
             </ul>
+
+            <div class="gallery_modal">
+              <img src="images/icon (2).png" alt="" class="m1">
+            
+            </div>
   
               <div class="close"><img src="images/icon (2).png" alt=""></div>
          </div>
          
       </div>
-      <div id="section4">
+      <div class="section" id="section4">
           <h2>Banner</h2>
           <!-- Swiper -->
-          <div class="swiper mySwiper" data-aos="fade-up">
+          <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="images/s1.png" alt=""></div>
               <div class="swiper-slide"><img src="images/s7.png" alt=""></div>
@@ -83,23 +118,47 @@
               <div class="swiper-slide"><img src="images/s5.png" alt=""></div>
               <div class="swiper-slide"><img src="images/s6.png" alt=""></div>
               <div class="swiper-slide"><img src="images/s2.png" alt=""></div>
-             <!--  <div class="swiper-slide"><img src="images/s8.jpg" alt=""></div>
-              <div class="swiper-slide"><img src="images/s9.png" alt=""></div> -->
+              <div class="swiper-slide"><img src="images/s8.png" alt=""></div>
+            
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
           </div>
+          
+          <div class="gallery_modal2">
+            <img src="images/icon (2).png" alt="" class="m1">
+           
+          </div>
       </div>
-      <div id="section5">
+      <div class="section" id="section5">
           <div class="text"><a href="#">THANK YOU</a></div>
       </div>
-    </div>
+    
 
+    
+     
     <script src="script/jquery-3.7.1.js"></script>
     <script src="script/action.js"></script>
+    <script src="script/jquery.fullpage.min.js"></script>
+
+     <script>
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+         anchors:['j1','j2','j3','j4','j5'],
+         navigation:true,
+         afterLoad:function(anchorNames, index){
+          $('.section').eq(index-1).addClass('on')
+         }
+        });
+
+      });
+  </script>
+   
      <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 
   <!-- Initialize Swiper -->
   <script>
@@ -119,10 +178,16 @@
         prevEl: ".swiper-button-prev",
       },
     });
+
+    var swiper = new Swiper(".mySwiper2", {
+      effect: "cards",
+      grabCursor: true,
+    });
   </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
 </body>
 </html>
